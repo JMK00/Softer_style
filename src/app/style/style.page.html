@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Bienvenue chez SOFTER STYLE</ion-title>
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <ion-searchbar clear></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+
+
+  <ion-list>
+    <ion-item button  *ngFor="let style of styles" (click)="goTo(style.id)">
+      <ion-avatar slot="start">
+        <ion-img [src]="style.lien"></ion-img>
+      </ion-avatar>
+      <ion-label>{{ style.nom}}</ion-label>
+      <!-- <br>
+        <button [routerLink]="['/',style.id] ">Supprimer</button>
+        <br> -->
+    </ion-item>
+  </ion-list>
+
+  <ion-button (click)="goToAdd()" shape="round" fill="outline">Ajouter un article</ion-button>
+
+
+
+

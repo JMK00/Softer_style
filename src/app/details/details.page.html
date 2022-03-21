@@ -1,0 +1,40 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+     <ion-back-button defaultHref="style"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{style.nom}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false">
+<ion-card-content>
+    <ion-list>
+      <ion-card-content>
+        <ion-item>
+          <ion-img [src]="style.lien"></ion-img>
+        </ion-item>
+      </ion-card-content>
+
+  <ion-item-sliding>
+    <ion-item>marques: {{style.marques}}</ion-item>
+
+  </ion-item-sliding>
+
+  <ion-item-sliding>
+    <ion-item>Taille: {{style.taille}} </ion-item>
+
+  </ion-item-sliding>
+
+
+  <ion-item-sliding>
+    <ion-item>Prix: {{style.prix}} </ion-item>
+
+  </ion-item-sliding>
+<br>
+  <ion-button shape="round" fill="outline" (click)="deleteArticle(style)" [routerLink]="['/style']">Supprimer</ion-button>
+
+    </ion-list>
+</ion-card-content>
+</ion-content>

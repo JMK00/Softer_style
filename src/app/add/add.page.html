@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ajouter un vêtement</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="style"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+
+
+    <ion-item lines="full">
+      <ion-label position="floating">Nom</ion-label>
+      <ion-input clear-input type="string" required [(ngModel)]="nom"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Prix</ion-label>
+      <ion-input clear-input type="number" required [(ngModel)]="prix"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Taille</ion-label>
+      <ion-input clear-input type="number" required [(ngModel)]="taille"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Lien</ion-label>
+      <ion-input clear-input type="string" required [(ngModel)]="lien"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Marques</ion-label>
+      <ion-input clear-input type="string" required [(ngModel)]="marques"></ion-input>
+    </ion-item>
+
+  <br>
+  <ion-button type="submit" shape="round" fill="outline" (click)="onSubmit()" [routerLink]="['/style']">Valider</ion-button>
+
+</ion-content>
